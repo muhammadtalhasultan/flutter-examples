@@ -1,5 +1,6 @@
+import 'package:calculator_app/home.dart';
 import 'package:flutter/material.dart';
-import 'package:settings_ui/pages/edit_profile.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,16 +9,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
+
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      title: 'Flutter Calculator App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const EditProfilePage(),
+      home: const HomePage(),
     );
   }
 }
