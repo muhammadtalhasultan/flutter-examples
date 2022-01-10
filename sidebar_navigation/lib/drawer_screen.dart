@@ -75,37 +75,25 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 .toList(),
           ),
           Row(
-            children: [
-              const Icon(
-                Icons.settings,
+            children: const [
+              Icon(
+                Icons.power_settings_new,
                 color: Colors.white,
               ),
-              const SizedBox(
+              SizedBox(
                 width: 10,
               ),
-              const Text(
-                'Settings',
+              Text(
+                'Logout',
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(
-                width: 10,
-              ),
-              Container(
-                width: 2,
-                height: 20,
-                color: Colors.white,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              const Text(
-                'Log out',
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              )
             ],
-          )
+          ),
+          const Text(
+            'Logout',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          ),
         ],
       ),
     );
